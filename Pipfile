@@ -1,0 +1,16 @@
+[[source]]
+url = "http://nexus.prod.uci.cu/repository/pypi-all/simple"
+name = "pypi"
+verify_ssl = false
+
+[packages]
+flask = "*"
+pylint = "*"
+mypy = "*"
+flask-script = "*"
+flask-sqlalchemy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.5"
