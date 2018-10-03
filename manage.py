@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+"""
+Manager module for the flask app
+"""
 
 import subprocess
 import sys
