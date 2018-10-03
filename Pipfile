@@ -9,6 +9,7 @@ pylint = "*"
 mypy = "*"
 flask-script = "*"
 flask-sqlalchemy = "*"
+coverage = "*"
 
 [dev-packages]
 
