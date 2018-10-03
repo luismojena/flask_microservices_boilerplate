@@ -1,3 +1,7 @@
-from .main import main
+"""
+Initializer for api module
+"""
 
-__all__ = ['main']
+from .main import api_blueprint
+
+__all__ = ['api_blueprint']
