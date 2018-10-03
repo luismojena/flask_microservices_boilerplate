@@ -6,7 +6,7 @@ import coverage
 
 
 def run():
-    os.environ['FLASK_CONFIG'] = 'testing'
+    os.environ['APP_CONFIG'] = 'testing'
 
     # start coverage engine
     coverage_engine = coverage.Coverage(branch=True)
