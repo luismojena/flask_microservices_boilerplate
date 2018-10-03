@@ -1,22 +1,12 @@
-import os
+"""
+Main file for the flask  app
 
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+"""
+from flask import Blueprint
 
-from config import config
-
-app = Flask(__name__)
-app.config.from_object(config[os.environ.get('APP_CONFIG', 'development')])
-
-db = SQLAlchemy(app)
+main_blueprint = Blueprint('main', __name__)
 
 
-# import models below (because of ciclic dependency)
-
-@app.route('/')
+@main_blueprint.route('/')
 def index():
-    return '<h1>Hello World</h1>'
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    return '<h1>Client App</h1>'
