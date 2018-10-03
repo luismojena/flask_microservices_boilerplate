@@ -2,13 +2,14 @@
 """
 Manager module for the flask app
 """
-
+import os
 import subprocess
 import sys
-from flask_script import Manager
-from app import app, db
 
-manager = Manager(app)
+from flask_script import Manager
+from app import create_app, db
+
+manager = Manager(create_app)
 
 
 @manager.command
@@ -43,4 +44,6 @@ def mypy():
 
 
 if __name__ == '__main__':
+    if sys.argv[1] == 'lint':
+        os.environ['APP_CONFIG'] = 'testing'
     manager.run()
